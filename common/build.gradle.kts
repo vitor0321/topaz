@@ -23,6 +23,7 @@ kotlin {
             isStatic = true
         }
     }
+
     sourceSets {
         androidMain.dependencies {
             api(kotlin("gradle-plugin:1.5.21"))
