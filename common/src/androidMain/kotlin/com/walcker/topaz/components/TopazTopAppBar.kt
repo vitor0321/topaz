@@ -12,12 +12,16 @@ import com.walcker.topaz.ExperimentalTopazComposeLibraryApi
 @Composable
 public fun TopazTopAppBar(
     modifier: Modifier = Modifier,
-    title: String
+    title: String,
+    actions: @Composable () -> Unit = {},
+    navigationIcon: @Composable () -> Unit = {}
 ) {
     TopAppBar(
         modifier = modifier,
         title = {
             Text(text = title)
-        }
+        },
+        actions = { actions() },
+        navigationIcon = { navigationIcon() }
     )
 }

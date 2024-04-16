@@ -38,7 +38,7 @@ public fun TopazDividerVertical(
     VerticalDivider(
         modifier = modifier
             .fillMaxWidth()
-            .height(size.horizontalWidth)
+            .height(size.verticalHeight)
             .background(TopazDividerTokens.background)
     )
 }
