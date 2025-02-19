@@ -35,6 +35,21 @@ kotlin {
             implementation(libs.androidx.material)
             implementation(libs.coil.compose)
             implementation(libs.coil.svg)
+            implementation(libs.accompanist.permissions)
+
+            implementation(libs.androidx.compose.bom)
+            implementation(libs.androidx.runtime)
+            implementation(libs.androidx.ui)
+            implementation(libs.androidx.ui.graphics)
+            implementation(libs.androidx.ui.tooling)
+            implementation(libs.androidx.ui.tooling.preview)
+            implementation(libs.androidx.material3)
+
+            implementation(libs.lottie.compose)
+            implementation(libs.constraint.layout.compose)
+
+            implementation(libs.androidx.ui.test.manifest)
+            implementation(libs.androidx.ui.test.junit4)
         }
         commonMain.dependencies {
             //put your multiplatform dependencies here

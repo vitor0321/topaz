@@ -7,15 +7,18 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.walcker.topaz.ExperimentalTopazComposeLibraryApi
+import com.walcker.topaz.components.loading.TopazCircularProgress
+import com.walcker.topaz.theme.TopazTheme
 import com.walcker.topaz.tokens.TopazSpacerOrientation
-import com.walcker.topaz.tokens.TopazSpacerSize
+import com.walcker.topaz.tokens.TopazSpacerSizeToken
 
 @ExperimentalTopazComposeLibraryApi
 @Composable
 public fun TopazHorizontalSpacer(
     modifier: Modifier = Modifier,
-    size: TopazSpacerSize = TopazSpacerSize.Small,
+    size: TopazSpacerSizeToken = TopazSpacerSizeToken.Small,
 ) {
     TopazSpacer(
         modifier = modifier,
@@ -28,7 +31,7 @@ public fun TopazHorizontalSpacer(
 @Composable
 public fun TopazVerticalSpacer(
     modifier: Modifier = Modifier,
-    size: TopazSpacerSize = TopazSpacerSize.Small,
+    size: TopazSpacerSizeToken = TopazSpacerSizeToken.Small,
 ) {
     TopazSpacer(
         modifier = modifier,
@@ -41,7 +44,7 @@ public fun TopazVerticalSpacer(
 private fun TopazSpacer(
     modifier: Modifier = Modifier,
     orientation: TopazSpacerOrientation,
-    size: TopazSpacerSize,
+    size: TopazSpacerSizeToken,
 ) {
     val orientationModifier = when (orientation) {
         TopazSpacerOrientation.Vertical ->
@@ -56,4 +59,22 @@ private fun TopazSpacer(
     }
 
     Spacer(modifier = modifier.then(orientationModifier))
+}
+
+@OptIn(ExperimentalTopazComposeLibraryApi::class)
+@Preview(showBackground = true)
+@Composable
+private fun TopazHorizontalSpacerPreview() {
+    TopazTheme {
+        TopazHorizontalSpacer()
+    }
+}
+
+@OptIn(ExperimentalTopazComposeLibraryApi::class)
+@Preview(showBackground = true)
+@Composable
+private fun TopazVerticalSpacerPreview() {
+    TopazTheme {
+        TopazVerticalSpacer()
+    }
 }

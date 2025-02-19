@@ -9,8 +9,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.walcker.topaz.ExperimentalTopazComposeLibraryApi
+import com.walcker.topaz.components.loading.TopazCircularProgress
+import com.walcker.topaz.theme.TopazTheme
 
 @ExperimentalTopazComposeLibraryApi
 @Composable
@@ -40,6 +43,18 @@ public fun TopazError(
                 fontSize = 28.sp,
                 textAlign = TextAlign.Center
             )
+        )
+    }
+}
+
+@OptIn(ExperimentalTopazComposeLibraryApi::class)
+@Preview(showBackground = true)
+@Composable
+private fun TopazErrorPreview() {
+    TopazTheme {
+        TopazError(
+            title = "Ops!",
+            message = "Algo deu errado",
         )
     }
 }
