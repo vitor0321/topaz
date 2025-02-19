@@ -8,15 +8,17 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.walcker.topaz.ExperimentalTopazComposeLibraryApi
-import com.walcker.topaz.tokens.CircularStroke
+import com.walcker.topaz.theme.TopazTheme
+import com.walcker.topaz.tokens.TopazCircularStrokeToken
 
 @ExperimentalTopazComposeLibraryApi
 @Composable
 public fun TopazCircularProgress(
     modifier: Modifier = Modifier,
-    stroke: CircularStroke = CircularStroke.Medium,
+    stroke: TopazCircularStrokeToken = TopazCircularStrokeToken.Medium,
 ) {
     CircularProgress(
         modifier = modifier,
@@ -27,7 +29,7 @@ public fun TopazCircularProgress(
 @Composable
 private fun CircularProgress(
     modifier: Modifier = Modifier,
-    stroke: CircularStroke
+    stroke: TopazCircularStrokeToken
 ) {
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -39,5 +41,14 @@ private fun CircularProgress(
             strokeWidth = stroke.width,
             trackColor = MaterialTheme.colorScheme.secondary
         )
+    }
+}
+
+@OptIn(ExperimentalTopazComposeLibraryApi::class)
+@Preview(showBackground = true)
+@Composable
+private fun TopazCircularProgressPreview() {
+    TopazTheme {
+        TopazCircularProgress()
     }
 }

@@ -1,6 +1,6 @@
-# Topaz UI Library 🎨🚀
+# Topaz Design System Library KMP 🎨🚀
 
-Topaz é uma biblioteca de componentes reutilizáveis para Jetpack Compose, projetada para facilitar o desenvolvimento de UIs modernas no Android e Kotlin Multiplatform.
+Topaz é uma Design System KMP de componentes reutilizáveis para Jetpack Compose, projetada para facilitar o desenvolvimento de UIs modernas no Android e Kotlin Multiplatform.
 
 
 ## 📥 Instalação Local
