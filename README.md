@@ -42,7 +42,7 @@ Agora, no `build.gradle.kts` do módulo `app`, adicione a dependência:
 dependencies {
     implementation("com.walcker.compose.ui:topaz:0.0.1")
 }
-``` 
+```
 
 ### 5️⃣ Sincronize o Projeto
 Após adicionar a dependência, sincronize o projeto (Sync Project with Gradle Files).
