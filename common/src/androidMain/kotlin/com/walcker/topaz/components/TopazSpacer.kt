@@ -40,6 +40,19 @@ public fun TopazVerticalSpacer(
     )
 }
 
+@ExperimentalTopazComposeLibraryApi
+@Composable
+public fun TopazAllSpacer(
+    modifier: Modifier = Modifier,
+    size: TopazSpacerSizeToken = TopazSpacerSizeToken.Small,
+) {
+    TopazSpacer(
+        modifier = modifier,
+        orientation = TopazSpacerOrientation.All,
+        size = size
+    )
+}
+
 @Composable
 private fun TopazSpacer(
     modifier: Modifier = Modifier,
@@ -56,6 +69,12 @@ private fun TopazSpacer(
             Modifier
                 .fillMaxHeight()
                 .width(size.verticalWidth)
+
+        TopazSpacerOrientation.All ->
+            Modifier
+                .fillMaxHeight()
+                .width(size.verticalWidth)
+                .height(size.horizontalHeight)
     }
 
     Spacer(modifier = modifier.then(orientationModifier))
